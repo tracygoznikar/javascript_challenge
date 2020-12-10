@@ -31,4 +31,21 @@ data.forEach((ufoReport) => {
       cell.text(value);
     });
   });
-
+//button event and form subission
+//assign the data from data.js
+let dateSubmission = data;
+//select the button
+let button = d3.select("#button");
+//select theform
+let form = d3.select("#form");
+//create event handlers
+button.on("click", runEnter);
+form.on("click", runEnter);
+//complete the event handler function for the form
+function runEnter() {
+    //prevent the page fromrefreshing
+    d3.eveent.preventDefault();
+    //select the input and get the raw html node
+    let inputElement = d3.select("#datetime");
+    //get the value property of the input element
+}
