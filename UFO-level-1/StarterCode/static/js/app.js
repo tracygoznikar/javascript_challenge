@@ -44,8 +44,15 @@ form.on("click", runEnter);
 //complete the event handler function for the form
 function runEnter() {
     //prevent the page fromrefreshing
-    d3.eveent.preventDefault();
+    d3.event.preventDefault();
     //select the input and get the raw html node
     let inputElement = d3.select("#datetime");
     //get the value property of the input element
-}
+    let inputValue = inputElement.property("value");
+
+    console.log(inputValue);
+    console.log(dateSubmission);
+
+    let filteredData = dateSubmission.filter((date) => date.datetime === inputValue);
+    console.log(filteredData);
+};
