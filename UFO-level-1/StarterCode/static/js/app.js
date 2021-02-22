@@ -12,6 +12,7 @@ let tableData = data;
 // YOUR CODE HERE!
 //get reference to the table body
 let tbody = d3.select("tbody");
+console.log(data);
 //loop through the data and console.log each ufo report object
 //data.forEach(function (ufoReport) {
 //    console.log(ufoReport);
